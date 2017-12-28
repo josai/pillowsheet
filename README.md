@@ -12,4 +12,7 @@ This abstracts pillow to another level allowing you to quickly modify pixel data
     img = pillowsheet.ImageWrapper('input_image.png', colortype="L")
     # change the first pixel to white
     img.pixel_values[0] = 255
-    img.save() # automatically saves file to 'out.png' but can be changed with the optional arguement outputname='a_different_image.png'
+    img.save() # default saves file to 'out.png'
+    # change the first pixel to black
+    img.pixel_values[0] = 0
+    img.save(outputname='imag_with_black_pixel.png')
